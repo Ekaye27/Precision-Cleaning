@@ -13,6 +13,14 @@ const slides = [
     src: "/images/hero/commercial-interior.jpg",
     alt: "Clean, bright commercial office interior",
   },
+  {
+    src: "/images/services/residential-cleaning.jpg",
+    alt: "Cozy, well-kept smaller home interior",
+  },
+  {
+    src: "/images/services/turnover-cleaning.jpg",
+    alt: "Bright, guest-ready studio apartment",
+  },
 ];
 
 export default function HeroSlideshow({ className }: { className?: string }) {

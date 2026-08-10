@@ -5,9 +5,8 @@ import { HelpCircle, Tag } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import SectionBadge from "@/components/SectionBadge";
-import PricingCard from "@/components/PricingCard";
 import Accordion from "@/components/Accordion";
-import { pricingFaqs, pricingPlans, services } from "@/lib/data";
+import { pricingFaqs, services } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -64,48 +63,6 @@ export default function PricingPage() {
                 </Reveal>
               ))}
           </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/backgrounds/process-bg.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-[0.05]"
-          />
-          <div className="absolute inset-0 section-scrim-light" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <SectionBadge icon={Tag}>Recurring Plans</SectionBadge>
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-950 sm:text-4xl">
-              Choose Your{" "}
-              <span className="text-gradient">Recurring Cleaning Plan</span>
-            </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              Choose the cleaning schedule that best fits your home and
-              lifestyle. Enjoy discounted pricing when you enroll in
-              recurring weekly, biweekly, or monthly cleaning services.
-            </p>
-          </Reveal>
-
-          <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {pricingPlans.map((plan, i) => (
-              <Reveal key={plan.name} delay={i * 0.1} className="h-full">
-                <PricingCard {...plan} />
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.2} className="mx-auto mt-10 max-w-2xl text-center">
-            <p className="text-sm text-slate-600">
-              Every plan includes eco-friendly products and a trained, vetted
-              team — request a quote for pricing tailored to your space.
-            </p>
-          </Reveal>
         </div>
       </section>
 

@@ -47,7 +47,6 @@ export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -146,7 +145,7 @@ export const services: Service[] = [
     icon: WashingMachine,
     image: "/images/services/move-in-out.jpg",
     shortDescription:
-      "Pristine turnovers for renters, owners, landlords & agents.",
+      "Reliable turnovers for renters, owners, landlords & agents.",
     description:
       "Perfect for homeowners, renters, landlords, property managers, and real estate professionals. We prepare properties for their next chapter with detailed, top-to-bottom cleaning.",
     features: [
@@ -216,95 +215,6 @@ export const services: Service[] = [
       "Final detail cleaning before occupancy",
     ],
     pricing: "Starting at $0.18–$0.25 per sq. ft. Call to book a service.",
-  },
-];
-
-export type PricingPlan = {
-  name: string;
-  description: string;
-  features: string[];
-  highlighted?: boolean;
-};
-
-export const pricingPlans: PricingPlan[] = [
-  {
-    name: "Weekly Cleaning",
-    description: "A reliable standard clean for everyday upkeep.",
-    features: [
-      "Up to 2 bedrooms / 2 bathrooms",
-      "Kitchen & living area cleaning",
-      "Dusting, vacuuming & mopping",
-      "Trash removal",
-      "Standard eco-friendly products",
-    ],
-  },
-  {
-    name: "Biweekly Cleaning",
-    description: "Our most popular plan for homes that need a deeper touch.",
-    features: [
-      "Up to 4 bedrooms / 3 bathrooms",
-      "Everything in Weekly Cleaning",
-      "Inside microwave & appliance fronts",
-      "Baseboards & door frame detailing",
-      "Bed making & linen tidy-up",
-      "Priority scheduling",
-    ],
-    highlighted: true,
-  },
-  {
-    name: "Monthly Cleaning",
-    description: "Scalable cleaning programs for offices & facilities.",
-    features: [
-      "Flexible after-hours scheduling",
-      "Dedicated account manager",
-      "Restroom & breakroom sanitation",
-      "Floor care & trash management",
-      "Monthly service reporting",
-      "Volume-based pricing",
-    ],
-  },
-];
-
-export type Testimonial = {
-  name: string;
-  role: string;
-  quote: string;
-  rating: number;
-  avatar: string;
-};
-
-export const testimonials: Testimonial[] = [
-  {
-    name: "Sarah Mitchell",
-    role: "Homeowner, Westlake Hills",
-    quote:
-      "Precision Cleaning has been a game changer for our family. The team is punctual, thorough, and always leaves our home smelling fresh. Couldn't ask for better service.",
-    rating: 5,
-    avatar: "/images/testimonials/sarah-mitchell.jpg",
-  },
-  {
-    name: "David Chen",
-    role: "Office Manager, Brightline Co.",
-    quote:
-      "We switched our office cleaning to Precision six months ago and the difference is night and day. Reliable, professional, and our staff have noticed immediately.",
-    rating: 5,
-    avatar: "/images/testimonials/david-chen.jpg",
-  },
-  {
-    name: "Maria Lopez",
-    role: "Property Manager",
-    quote:
-      "Their move-out cleaning service helps us turn over units faster than ever. Every unit comes back immaculate and inspection-ready. Highly recommend for landlords.",
-    rating: 5,
-    avatar: "/images/testimonials/maria-lopez.jpg",
-  },
-  {
-    name: "James Patterson",
-    role: "Homeowner, Downtown Loft",
-    quote:
-      "Booking was effortless and the deep clean exceeded expectations — places I didn't even think to clean were immaculate. Worth every penny.",
-    rating: 5,
-    avatar: "/images/testimonials/james-patterson.jpg",
   },
 ];
 
@@ -419,52 +329,6 @@ export const pricingFaqs = [
     question: "How soon can I schedule a cleaning?",
     answer:
       "Complete the quote form, and we'll contact you to schedule your cleaning.",
-  },
-];
-
-export type GalleryItem = {
-  title: string;
-  category: string;
-  beforeImage: string;
-  afterImage: string;
-};
-
-export const galleryItems: GalleryItem[] = [
-  {
-    title: "Corporate Office Refresh",
-    category: "Commercial Cleaning",
-    beforeImage: "/images/gallery/commercial-cleaning-before.jpg",
-    afterImage: "/images/gallery/commercial-cleaning-after.jpg",
-  },
-  {
-    title: "Everyday Home Reset",
-    category: "Residential Cleaning",
-    beforeImage: "/images/gallery/residential-cleaning-before.jpg",
-    afterImage: "/images/gallery/residential-cleaning-after.jpg",
-  },
-  {
-    title: "Bathroom Descale & Shine",
-    category: "Deep Cleaning",
-    beforeImage: "/images/gallery/deep-cleaning-before.jpg",
-    afterImage: "/images/gallery/deep-cleaning-after.jpg",
-  },
-  {
-    title: "Guest-Ready Rental Turnover",
-    category: "Airbnb & Vacation Rental Turnovers",
-    beforeImage: "/images/gallery/turnover-cleaning-before.jpg",
-    afterImage: "/images/gallery/turnover-cleaning-after.jpg",
-  },
-  {
-    title: "Move-Out Apartment Reset",
-    category: "Move In / Move Out",
-    beforeImage: "/images/gallery/move-in-move-out-before.jpg",
-    afterImage: "/images/gallery/move-in-move-out-after.jpg",
-  },
-  {
-    title: "Post-Renovation Dust Removal",
-    category: "Post-Construction Cleaning",
-    beforeImage: "/images/gallery/post-construction-before.jpg",
-    afterImage: "/images/gallery/post-construction-after.jpg",
   },
 ];
 
