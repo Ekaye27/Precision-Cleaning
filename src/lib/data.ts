@@ -18,9 +18,9 @@ export const siteConfig = {
   name: "Precision Cleaning Services",
   shortName: "Precision Cleaning",
   tagline: "Pristine Spaces, Precision Results",
-  phone: "(609) 214-9590",
+  phone: "(561) 619-8697",
   email: "precisioncleaningfl@gmail.com",
-  address: "217 Pin Hov Circle, Greenacres, FL 33463",
+  address: "401 W. Lantana Rd, Lantana, FL 33462",
   hours: "Mon - Sat: 7:00 AM - 7:00 PM",
   social: {
     facebook: "#",

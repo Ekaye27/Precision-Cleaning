@@ -5,15 +5,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { services } from "@/lib/data";
 
-type Status = "idle" | "submitting" | "success";
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    setTimeout(() => setStatus("success"), 1100);
+
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -63,7 +78,7 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             required
-            placeholder="(609) 214-9590"
+            placeholder="(561) 619-8697"
             className="form-input"
           />
         </Field>
@@ -83,7 +98,7 @@ export default function ContactForm() {
             name="address"
             type="text"
             required
-            placeholder="217 Pin Hov Circle, Greenacres, FL 33463"
+            placeholder="401 W. Lantana Rd, Lantana, FL 33462"
             className="form-input"
           />
         </Field>
@@ -183,6 +198,13 @@ export default function ContactForm() {
           )}
         </AnimatePresence>
       </button>
+
+      {status === "error" && (
+        <p className="mt-4 text-sm font-medium text-red-600">
+          Something went wrong sending your request. Please try again, or
+          call us directly.
+        </p>
+      )}
     </form>
   );
 }
